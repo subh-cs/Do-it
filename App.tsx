@@ -1,16 +1,20 @@
-import "react-native-gesture-handler";
+import React, { useState } from "react";
 import { StyleSheet, SafeAreaView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import React from "react";
 
-import HomeScreen from "./pages/HomeScreen";
+// import HomeScreen from "./pages/HomeScreen";
+import HomeScreen from "./pages/Homescreen";
+// import HomeScreen from "./src/pages/Homescreen";
+
+
+
 import LoginScreen from "./pages/LoginScreen";
 
 const Stack = createStackNavigator();
 
 export default function App() {
-  const [loggedIn, setLoggedIn] = React.useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const loginHandler = () => {
     setLoggedIn((prev) => !prev);
@@ -24,7 +28,7 @@ export default function App() {
         ) : (
           <Stack.Screen
             name="Login"
-            children={() => <LoginScreen loginHandler={loginHandler} />}
+            component={() => <LoginScreen loginHandler={loginHandler} />}
           />
         )}
       </Stack.Navigator>
