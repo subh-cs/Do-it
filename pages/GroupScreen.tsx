@@ -27,7 +27,7 @@ const GroupScreen: FC<GroupScreenProps> = ({ enrollHandler }) => {
 const ListOfGroups: FC = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text>ListOfGroups</Text>
+            <Text className= 'text-red-500'>ListOfGroups</Text>
             <TouchableOpacity onPress={() => navigation.navigate("SingleGroup")}>
                 <Text>View</Text>
             </TouchableOpacity>

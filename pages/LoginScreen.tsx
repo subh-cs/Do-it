@@ -7,7 +7,7 @@ const LoginScreen = ({ loginHandler }) => {
         <SafeAreaView style={styles.container}>
             {/* <View> <Text>Hello</Text>
       </View> */}
-            {/* <Text> Hello</Text> */}
+            <Text className= 'text-red-400'> Hello</Text>
             <Text style={styles.title}>LoginScreen</Text>
             <TextInput
                 style={styles.input}
