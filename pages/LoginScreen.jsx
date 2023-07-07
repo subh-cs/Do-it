@@ -1,25 +1,59 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import React from "react";
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const LoginScreen = ({ loginHandler }) => {
   return (
-    <View style={styles.container}>
-      <Text>LoginScreen</Text>
-      <TouchableOpacity onPress={loginHandler}>
-        <Text>Login</Text>
+    <SafeAreaView style={styles.container}>
+      {/* <View> <Text>Hello</Text>
+      </View> */}
+      {/* <Text> Hello</Text> */}
+      <Text style={styles.title}>LoginScreen</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Username"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        secureTextEntry={true}
+      />
+      <TouchableOpacity>
+        <Text style={styles.forgotPassword}>Forgot Password?</Text>
       </TouchableOpacity>
-    </View>
+      <Button
+        title="Login"
+        onPress={loginHandler}
+      />
+    </SafeAreaView>
   );
 };
 
-export default LoginScreen;
-
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height:"100%"
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  input: {
+    width: '100%',
+    height: 40,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    marginBottom: 10,
+    paddingLeft: 10,
+  },
+  forgotPassword: {
+    marginTop: 10,
+    color: '#007AFF',
   },
 });
 
+export default LoginScreen;
