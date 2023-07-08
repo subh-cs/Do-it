@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import Splash from './splash';
 const LoginScreen = ({ loginHandler }) => {
   const navigation = useNavigation();
 
