@@ -147,15 +147,12 @@ const LoginScreen = ({ loginHandler }) => {
             <Text className='text-red-400'>Go to Splash</Text>
           </TouchableOpacity>
 
-<<<<<<< Updated upstream
         <TouchableOpacity onPress={navigateToSplash}>
           <Text className='text-red-400' >Go to exercise/terms and condition</Text>
         </TouchableOpacity>
-=======
           <TouchableOpacity onPress={PaymentScreen}>
             <Text className='text-green-400 pt-3'>Go to PaymentScreen</Text>
           </TouchableOpacity>
->>>>>>> Stashed changes
 
           <TouchableOpacity onPress={navigateToGroupInfoScreen}>
             <Text className='text-blue-400 pt-3'>Go to GroupInfoScreen</Text>
