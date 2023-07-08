@@ -5,13 +5,13 @@ import backgroundImage from '../assets/Group5.png';
 import logo from '../assets/logo.png';
 
 import { useNavigation } from '@react-navigation/native';
-// import Splash from './splash';
+import Splash from './splash';
 const LoginScreen = ({ loginHandler }) => {
   const navigation = useNavigation();
 
-  // const navigateToSplash = () => {
-  //   navigation.navigate('Splash');
-  // };
+  const navigateToSplash = () => {
+    navigation.navigate('Splash');
+  };
 
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
@@ -20,18 +20,28 @@ const LoginScreen = ({ loginHandler }) => {
         <Text style={styles.title}>
           The seed of every habit is a single tiny decision
         </Text>
+
+
+        <TouchableOpacity onPress={navigateToSplash}>
+          <Text className='text-red-400' >Go to Splash</Text>
+        </TouchableOpacity>
+
+
         <TouchableOpacity
           style={styles.button}
           onPress={() => console.log('Button clicked!')}
         >
+
           <Text style={styles.buttonText} onPress={loginHandler}>Get Started</Text>
         </TouchableOpacity>
       </View>
+
+
     </ImageBackground>
 
   );
 };
-      {/* <Button
+{/* <Button
         title="Get Started"
         onPress={loginHandler}
       /> */}
