@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import logo from '../assets/logo.png';
 const Stack = createStackNavigator();
 
 interface GroupScreenProps {
@@ -27,6 +27,8 @@ const GroupScreen: FC<GroupScreenProps> = ({ enrollHandler }) => {
 const ListOfGroups: FC = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <Image source={logo} style={styles.logo} />
+      <Text style={styles.title}>Ongoing Groups</Text>
       <Text style={styles.descText}>Ongoing Groups</Text>
       <View style={styles.cardContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("SingleGroup")}>
@@ -94,7 +96,9 @@ const styles = StyleSheet.create({
     height: "100%",
     paddingRight: 20,
     paddingLeft: 20,
+    backgroundColor: '#101010',
   },
+  
   container2: {
     display: "flex",
     paddingTop: 20,

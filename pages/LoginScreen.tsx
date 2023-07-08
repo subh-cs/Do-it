@@ -143,9 +143,6 @@ const LoginScreen = ({ loginHandler }) => {
             The seed of every habit is a single tiny decision
           </Text>
 
-          <TouchableOpacity onPress={navigateToSplash}>
-            <Text className='text-red-400'>Go to Splash</Text>
-          </TouchableOpacity>
 
         <TouchableOpacity onPress={navigateToSplash}>
           <Text className='text-red-400' >Go to exercise/terms and condition</Text>
