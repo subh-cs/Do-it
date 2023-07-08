@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import { StyleSheet, SafeAreaView } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-
-// import HomeScreen from "./pages/HomeScreen";
-import HomeScreen from "./pages/Homescreen";
-// import HomeScreen from "./src/pages/Homescreen";
-
-
-
-import LoginScreen from "./pages/LoginScreen";
+import React, { useState } from 'react';
+import { StyleSheet, SafeAreaView, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './pages/Homescreen';
+import LoginScreen from './pages/LoginScreen';
+import Splash from './pages/splash';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +26,7 @@ export default function App() {
             component={() => <LoginScreen loginHandler={loginHandler} />}
           />
         )}
+        <Stack.Screen name="Splash" component={Splash} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -39,8 +35,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
