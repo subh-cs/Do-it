@@ -4,7 +4,6 @@ import React, { FC } from "react";
 const SettingScreen: FC = () => {
     return (
         <View style={styles.container}>
-            <Text>SettingScreen</Text>
         </View>
     );
 };

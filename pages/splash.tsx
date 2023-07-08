@@ -1,70 +1,123 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
-import backgroundImage from '../assets/Group5.png';
-import logo from '../assets/logo.png';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
+import exer from "../assets/exercise_image.png";
 
 const Splash = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxToggle = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const handleEnrollNow = () => {
+    console.log("Enroll Now pressed!");
+  };
+
   return (
-    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-      <View style={styles.container}>
-        <Image source={logo} style={styles.logo} />
-        <Text style={styles.title}>
-          The seed of every habit is a single tiny decision
+    <View style={styles.container}>
+      <ScrollView>
+        <Text style={styles.oreText}>Exercise</Text>
+        <Image source={exer} style={styles.logo} />
+        <Text style={styles.descText}>Description</Text>
+        <Text style={styles.descPara}>
+          Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
+          elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
+          lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos himenaeos.Yorem ipsum dolor sit amet, consectetur.
+        </Text>
+        <Text></Text>
+        <Text style={styles.descText}>Terms & Conditions</Text>
+        <Text style={styles.descPara}>
+          1. Yorem ipsum dolor sit amet, adipiscing elit. Etiam eu turpis
+          molestie.
+        </Text>
+        <Text style={styles.descPara}>
+          2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+          praesentium nobis.
         </Text>
         <TouchableOpacity
-          style={styles.button}
-          onPress={() => console.log('Button clicked!')}
+          style={styles.acceptContainer}
+          onPress={handleCheckboxToggle}
         >
-          <Text style={styles.buttonText}>Get Started</Text>
+          <View style={styles.checkbox}>
+            {isChecked && <View style={styles.checkboxIcon} />}
+          </View>
+          <Text style={styles.acceptText}>I accept the terms and conditions hereby mentioned.</Text>
         </TouchableOpacity>
-      </View>
-    </ImageBackground>
+      </ScrollView>
+      <TouchableOpacity style={styles.button} onPress={handleEnrollNow}>
+        <Text style={styles.buttonText}>Enroll Now</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
-    backgroundColor: '#101010' ,
-    justifyContent: 'center',
-  },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#101010",
+    paddingTop: 60,
     padding: 20,
   },
-  logo: {
-    width: 109,
-    height: 60,
-    marginBottom: 20,
+  oreText: {
+    color: "#9AF447",
+    fontSize: 30,
+    fontWeight: "bold",
+    marginBottom: 10,
   },
-  title: {
-    fontSize: 22,
-    textAlign: 'center',
-    marginBottom: 20,
-    color: 'white',
+  descPara: {
+    color: "white",
+    textAlign: "justify",
+  },
+  descText: {
+    color: "#FF0084",
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  acceptContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 20,
+  },
+  checkbox: {
+    width: 20,
+    height: 20,
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 10,
+  },
+  checkboxIcon: {
+    width: 10,
+    height: 10,
+    backgroundColor: "white",
+    borderRadius: 2,
+  },
+  acceptText: {
+    color: "white",
   },
   button: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     borderRadius: 5,
-    backgroundColor: '#212121',
+    backgroundColor: "#9af444",
     paddingVertical: 10,
     paddingHorizontal: 10,
-    shadowColor: 'rgba(0, 0, 0, 0.137)',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    shadowRadius: 10,
-    elevation: 5,
-    width: 286,
-    height: 50,
-    position: 'absolute',
-    bottom: 100,
+    marginTop: 30,
   },
   buttonText: {
-    textAlign: 'center' ,
-    color: '#00C2FF',
+    textAlign: "center",
+    color: "#000",
     fontSize: 20,
     letterSpacing: 0.1,
   },

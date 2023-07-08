@@ -23,7 +23,7 @@ const LoginScreen = ({ loginHandler }) => {
 
 
         <TouchableOpacity onPress={navigateToSplash}>
-          <Text className='text-red-400' >Go to Splash</Text>
+          <Text className='text-red-400' >Go to exercise/terms and condition</Text>
         </TouchableOpacity>
 
 
