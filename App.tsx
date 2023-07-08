@@ -5,6 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './pages/Homescreen';
 import LoginScreen from './pages/LoginScreen';
 import Splash from './pages/splash';
+import GroupInfoScreen from './pages/GroupInfoScreen';
+import PaymentScreen from './pages/PaymentScreen';
+// import { SparklesIcon as SparklesIconOutline } from "react-native-heroicons/outline";
+
+import test_PaymentScreen from './pages/PaymentScreen';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +32,9 @@ export default function App() {
           />
         )}
         <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="GroupInfoScreen" component={GroupInfoScreen} />
+        <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+        {/* <Stack.Screen name="LoginScreen" component={PaymentScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
