@@ -16,6 +16,7 @@ const GroupScreen: FC<GroupScreenProps> = ({ enrollHandler }) => {
     >
       <Stack.Screen name="ListOfGroups" component={ListOfGroups} />
       <Stack.Screen name="SingleGroup" component={SingleGroup} />
+      <Stack.Screen name="ProfilePage" component={ProfilePage} />
       <Stack.Screen
         name="PaymentPage"
         children={() => <PaymentPage enrollHandler={enrollHandler} />}
@@ -28,7 +29,9 @@ const ListOfGroups: FC = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.logo} />
-      <Text style={styles.title}>Ongoing Groups</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("ProfilePage")}>
+        <Image source={require("../assets/profilepic.png")} style={styles.profileIcon} />
+      </TouchableOpacity>
       <Text style={styles.descText}>Ongoing Groups</Text>
       <View style={styles.cardContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("SingleGroup")}>
@@ -77,7 +80,15 @@ const SingleGroup: FC = ({ navigation }) => {
     </View>
   );
 };
-
+const ProfilePage: FC = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate("ProfilePage")}>
+        <Text>This is profile</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 const PaymentPage: FC<GroupScreenProps> = ({ enrollHandler }) => {
   return (
     <View style={styles.container}>
@@ -110,6 +121,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 20,
     justifyContent: "center",
+  },
+  profileIcon: {
+    width: 40,
+    height: 40,
+    position: 'absolute',
+    top: -45,
+    right: 20,
   },
   card: {
     width: 141,
