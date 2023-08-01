@@ -25,17 +25,15 @@
     Our app is built on the principle that consistency and accountability are key to achieving your goals. Whether you want to exercise regularly, read more books, meditate daily, or develop any other positive habit, DO it is here to guide you every step of the way.
   </p>
 
-  <h2>Features</h2>
+## Explanation: 
+This app helps you to be consistent towards your goal of any habit building (Exercise) by staking own money and might win some.
 
-  <ol>
-    <li><strong><ins>Goal Settings:</ins></strong> Start by defining your habits and setting specific, achievable goals. Whether it's a daily, weekly, or monthly target, DO it allows you to customize your habits according to your preferences and availability.</li>
-    <li><strong><ins>Progress Tracking:</ins></strong> Stay motivated by tracking your progress over time. With a visually appealing and intuitive interface, DO it provides detailed insights and statistics, allowing you to see your improvement and celebrate your milestones.</li>
-    <li><strong><ins>Reminders and Notifications:</ins></strong> Never miss a habit-building opportunity with our smart reminder system. Set personalized reminders and receive notifications at the perfect time to keep you on track and focused on your goals.</li>
-    <li><strong><ins>Habit Streaks and Rewards:</ins></strong> Build streaks for each habit you conquer. Celebrate your consistency and unlock exciting rewards as you achieve new milestones, making your habit-building journey even more enjoyable.</li>
-    <li><strong><ins>Community Support:</ins></strong> Connect with like-minded individuals who share similar goals. Join communities, participate in challenges, and get inspired by others' success stories. We believe that collective encouragement is a powerful catalyst for personal growth.</li>
-    <li><strong><ins>Data Backup and Sync:</ins></strong> Your habits and progress are securely backed up and synced across devices. Whether you switch phones or use multiple devices, you can seamlessly access your data and continue your habit-building journey from where you left off.</li>
-  </ol>
-
+- Step 1: You enrol to the contest and stake a money and you will keep a promise that you're going to be consistent for the next two months.
+- Step 2: Like you, 199 other people joined the contest as well and they also stake their money. 
+- Step 3: Everyone stakes $100, and total pool become $20,000. 
+- Step 4: You have to check in to the gym everyday to maintain the streak. By doing that you're proving that you're consistent. 
+- Step 5: If you lose one day streak, you're out. And your money will stay at the pool.
+- Step 6: At the end of the 2 month, if 20 people will able to complete the streak successfully, the whole pool of $20,000 will be distributed among 20 people. and everyone will receive $1000. Isn't that great!! 🚀
   
 
   <h2>Tech Stack</h2>
